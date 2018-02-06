@@ -1,4 +1,4 @@
-# Useful SQL Table info & Queries used for Wordpress administration 
+# Useful SQL Table info & Queries used for Wordpress Administration 
 
 ## Backup your WordPress Database using phpMyAdmin
 
