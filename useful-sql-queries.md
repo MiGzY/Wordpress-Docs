@@ -81,6 +81,23 @@ UPDATE wp_users SET user_pass = MD5( '[new_password]' ) WHERE user_login = '[use
 ```
 UPDATE wp_users SET user_login = 'newusername' WHERE user_login = 'oldusername';
 ```
+## Add a new user
+Database name: 		  database_name  
+User name: 	   		  new.user.name  
+User Password: 		  new_password  
+User display name:  User Nicename  
+User Email:         email@domain.com  
+User Display Name:  User D.
+
+``` 
+INSERT INTO `database_name`.`wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES ('9999', 'new.user.name', MD5('new_password'), 'User Nicename', 'email@domain.com', 'http://www.domain.com/', '2015-11-27 00:00:00', '', '0', 'User D.');
+```
+```
+INSERT INTO `database_name`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, '9999', 'wp_capabilities', 'a:1:{s:13:"administrator";s:1:"1";}');
+```
+```
+INSERT INTO `database_name`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, '9999', 'wp_user_level', '10');
+```
 ## Search and Replace content text in post tables
 ```
 UPDATE wp_posts SET post_content = REPLACE (post_content,'Item to replace here','Replacement text here');
@@ -136,6 +153,9 @@ UPDATE wp_posts SET comment_status = 'closed' where post_type ='post';
 ## After removing a plugin sometimes Meta data is still stored in the post_meta table.  Remove this with 
 ```
 DELETE FROM wp_postmeta WHERE meta_key = 'your-meta-key';
+## Bulk change post meta_key
+```
+UPDATE wp_postmeta SET meta_key = 'new_key_name' WHERE meta_key = 'old_key_name';
 ```
 ## Export comment author email addresses with no duplicates
 (Once you have the result, under Query results operations, select export to export all the emails in phpMyAdmin.)
