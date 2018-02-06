@@ -85,7 +85,7 @@ UPDATE wp_users SET user_login = 'newusername' WHERE user_login = 'oldusername';
 ```
 UPDATE wp_posts SET post_content = REPLACE (post_content,'Item to replace here','Replacement text here');
 ```
-# Assign Posts to a New Author
+## Assign Posts to a New Author
 ```
 UPDATE wp_posts SET post_author = (SELECT ID FROM wp_users WHERE user_login = '[new_author_login]') WHERE post_author = (SELECT ID FROM wp_users WHERE user_login = '[old_author_login]');
 ```
@@ -109,7 +109,7 @@ DELETE FROM wp_comments WHERE comment_type = 'pingback';
 ```
 UPDATE wp_posts SET post_type = 'page' WHERE post_type = 'post';
 ```
-# Change Pages into posts
+## Change Pages into posts
 ```
 UPDATE wp_posts SET post_type = 'post' WHERE post_type = 'page';
 ```
