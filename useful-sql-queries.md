@@ -153,6 +153,7 @@ UPDATE wp_posts SET comment_status = 'closed' where post_type ='post';
 ## After removing a plugin sometimes Meta data is still stored in the post_meta table.  Remove this with 
 ```
 DELETE FROM wp_postmeta WHERE meta_key = 'your-meta-key';
+```
 ## Bulk change post meta_key
 ```
 UPDATE wp_postmeta SET meta_key = 'new_key_name' WHERE meta_key = 'old_key_name';
