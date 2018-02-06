@@ -16,32 +16,32 @@
 ## Core Tables 
 (wp_ prefix may differ depending on your installation)
 
-wp_posts – all the content of your posts and pages as well as menu data and media attachments.
-wp_postmeta – meta data for each post. Meta data is added to this table when you add a custom field to your posts so for example, you could add what music you were listening to at the time of writing the post.
-wp_comments – all your comments on posts and pages including author, date, email, etc.
-wp_commentmeta – meta data for comments.
-wp_users – usernames, passwords (encrypted), and other user data.
-wp_usermeta – meta data for users.
-wp_options – general WordPress settings.
-wp_links – used for blogroll links, not really used on most WordPress sites today.
-wp_terms – categories and tags for posts.
-wp_termmeta – meta data for categories and tags.
-wp_term_relationships – links posts with categories and tags.
-wp_term_taxonomy – taxonomies are used for classifying your data. The WordPress default taxonomies are category, tag, and link category. This table manages the taxonomies including their name and description.
+wp_posts – all the content of your posts and pages as well as menu data and media attachments.<br>
+wp_postmeta – meta data for each post. Meta data is added to this table when you add a custom field to your posts so for example, you could add what music you were listening to at the time of writing the post.<br>
+wp_comments – all your comments on posts and pages including author, date, email, etc.<br>
+wp_commentmeta – meta data for comments.<br>
+wp_users – usernames, passwords (encrypted), and other user data.<br>
+wp_usermeta – meta data for users.<br>
+wp_options – general WordPress settings.<br>
+wp_links – used for blogroll links, not really used on most WordPress sites today.<br>
+wp_terms – categories and tags for posts.<br>
+wp_termmeta – meta data for categories and tags.<br>
+wp_term_relationships – links posts with categories and tags.<br>
+wp_term_taxonomy – taxonomies are used for classifying your data. The WordPress default taxonomies are category, tag, and link category. This table manages the taxonomies including their name and description.<br>
 
 ## Core Table Fields
 
-wp_users:
-ID
-user_login
-user_pass
-user_nicename
-user_email
-user_url
-user_registered
-user_activation_key
-user_status
-display_name
+wp_users:<br>
+ID<br>
+user_login<br>
+user_pass<br>
+user_nicename<br>
+user_email<br>
+user_url<br>
+user_registered<br>
+user_activation_key<br>
+user_status<br>
+display_name<br>
 
 # Useful SQL Queries 
 (Login to phpMyAdmin panel and select your WordPress database.  Click on the SQL tab which will bring you to a page with a SQL query box.)
